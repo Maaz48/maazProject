@@ -1,0 +1,48 @@
+
+ 
+let signin = (event) => {
+  event.preventDefault();
+
+
+  let email = document.getElementById("email").value
+  let password = document.getElementById("password").value
+  let emaila = document.getElementById("email")
+  let passworda = document.getElementById("password")
+
+
+
+
+
+
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    // .then((docRef) => {
+    //   console.log("Document written with ID: ", docRef.id);
+    //   localStorage.setItem("getUserId", docRef.id)
+    // })
+    .then((userCredential) => {
+      // Signed in
+      var user = userCredential.user;
+      if (user) {
+        swal({
+          title: "You have successfuly login!",
+          // text: "Your form has been submitted",
+          icon: "success",
+          button: "Go to dashboard!",
+        }).then(function () {
+          location.href = "../user.html"
+        });
+      }
+
+      // ...
+    })
+
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      swal(`${errorMessage}`, "You clicked the button!", "error");
+    });
+
+}
+
+

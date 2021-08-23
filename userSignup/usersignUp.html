@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./usersignup.css">
+    <title>resturant SignUp</title>
+</head>
+
+<body>
+
+    <div class="form-bg">
+        <div class="container">
+            <div class="row justify-content-center my-5">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="form-container">
+                        <h3 class="title">Register <span id="resturantHeading">Please</span></h3>
+                        <form class="form-vertical">
+                            <div class="form-group">
+                                <label>User Name</label>
+                                <input type="text" class="form-control" placeholder="user name" id="resturantName">
+                            </div>
+                            <div class="form-group">
+                                <label>Email ID</label>
+                                <input type="email" class="form-control" placeholder="Email Address" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="Password" id="password">
+                            </div>
+
+                            <h4 class="sub-title">Personal Information</h4>
+                            <div class="form-group">
+                                <label>Country</label>
+                                <input type="text" class="form-control" placeholder="country" id="Country">
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" class="form-control" placeholder="City" id="city">
+                            </div>
+
+                            <div class="check-terms">
+                                <input type="checkbox" class="checkbox">
+                                <span class="check-label">I agree to the terms</span>
+                            </div>
+                            <span class="signin-link">Already have an account? Click here to <a
+                                    href="../userSignin/usersignin.html">Login</a></span>
+                            <button class="btn btn-primary" id="signUp-btn">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ==========================bootstrap cdn========================== -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- ================================firebase SDK================================ -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBZh1Iqx7sJZgC65maWPYmIZcUx3LPH3qY",
+            authDomain: "hackathon-2db2e.firebaseapp.com",
+            projectId: "hackathon-2db2e",
+            storageBucket: "hackathon-2db2e.appspot.com",
+            messagingSenderId: "668504465926",
+            appId: "1:668504465926:web:11843ee5abadc43b365987"
+        };
+        firebase.initializeApp(firebaseConfig);
+
+    </script>
+    <!-- ===================================external js file=================================== -->
+    <script src="./usersignup.js"></script>
+</body>
+
+</html>

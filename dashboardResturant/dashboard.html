@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./dashboardCss.css">
+    <title>Resturant Dashboard</title>
+</head>
+
+<body>
+    <!-- ============navbar====================== -->
+    <nav class="navbar sticky-top navbar-dark bg-light ">
+        <div class="container-fluid">
+            <p class="h4" id="textcolr"><span id="resturantName"></span> RESTURANT</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Select Food Category
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">RICE</a>
+                    <a class="dropdown-item" href="#">FRIED ITEMS</a>
+                    <a class="dropdown-item" href="#">FASTFOOD</a>
+                </div>
+                <div class="mx-3"></div>
+                <i id="logout" type="button" class="fas fa-sign-out-alt mx-2"></i>
+                <div class="mx-2"></div>
+                <div>
+                    <a class="btn btn-dark w3-button w3-black"
+                        onclick="document.getElementById('id01').style.display='block'" href="#"
+                        role="button">Orders</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================dashboard modal========================= -->
+    <div class="w3-container">
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-teal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+                    <h2>ORDERS STATUS</h2>
+                </header>
+                <div class="w3-container" id="navModal">
+                    <div class="my-5"></div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a href="#home1" class="nav-link active" data-toggle="pill">Pending</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#profile1" class="nav-link" data-toggle="pill">Accepted</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#products1" class="nav-link" data-toggle="pill">Delivered</a>
+                                    </li>
+                                </ul>
+
+
+
+                                <div class="tab-content py-3">
+                                    <div class="tab-pane fade show active" id="home1">MAAZ KA 1st
+                                        TAB
+                                    </div>
+                                    <div class="tab-pane fade" id="profile1">MAAZ KA 2nd
+                                        TAB
+                                    </div>
+                                    <div class="tab-pane fade" id="products1">MAAZ KA
+                                        3rd TAB
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ==========heading================= -->
+    <div class="container-fluid d-flex align-items-center flex-column" id="mainfood">
+        <div class="container my-3">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                </div>
+                <div class="col">
+                    <div class="nine">
+                        <h1 class="mt-5" style="color: white;">FOOD CATEGORY<span style="color: white;">Taste You
+                                Want</span></h1>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col">
+                    <button type="button" class="btn btn-raised  btn-dark btn-block ripple-effect" id="addFood">
+                        <p class="h4">ADD FOOD</p>
+                    </button>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ==========modal================== -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" id="closemodal">
+            <span class="close">&times;</span>
+            <div class="row">
+                <div class="col-md-12">
+                    <form>
+                        <h1> MAAZ RESTURANT </h1>
+
+                        <fieldset>
+                            <legend><span class="number">1</span> ADD YOUR FOOD</legend>
+
+                            <label for="Item-Name">Item Name :</label>
+                            <input type="text" id="Item-Name" name="user_name">
+
+                            <label for="price">Price :</label>
+                            <input type="text" id="price" name="user_email">
+
+                            <label for="Category">Select Food Category:</label>
+                            <select id="Category" name="Category">
+                                <option value="rice">Rice</option>
+                                <option value="fried">FRIED</option>
+                                <option value="fastfood">FASTFOOD</option>
+                            </select>
+                            <label for="delivery">Delivery Type:</label>
+                            <select id="delivery" name="delivery">
+                                <option value="paid">PAID</option>
+                                <option value="free">FREE</option>
+                            </select>
+                            <div class="form-group">
+                                <label for="foodimage">Example file input</label>
+                                <input type="file" class="form-control-file" id="foodimage">
+                            </div>
+                        </fieldset>
+
+
+                        <button type="button" class="btn btn-outline-primary" id="modalBtn">Add Food</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container-fluid my-3 justify-content-center">
+        <div class="row align-items-center justify-content-center">
+
+        </div>
+    </div>
+
+
+    <!-- ================food items==================== -->
+
+    <div class="container" id="mainContainer">
+        <div class="row" id="getCard">
+
+            <!-- <div class="col-md-4 col-sm-6"></div> -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- ==========================bootstrap cdn========================== -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- ================================firebase SDK================================ -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBZh1Iqx7sJZgC65maWPYmIZcUx3LPH3qY",
+            authDomain: "hackathon-2db2e.firebaseapp.com",
+            projectId: "hackathon-2db2e",
+            storageBucket: "hackathon-2db2e.appspot.com",
+            messagingSenderId: "668504465926",
+            appId: "1:668504465926:web:11843ee5abadc43b365987"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- ===================================external js file=================================== -->
+    <script src="./dashboardJs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./user.css">
+    <title>Document</title>
+</head>
+
+<body onload="cards()" onload="getresturantName()">
+
+    <!-- ====================nav-bar========================== -->
+    <nav class="navbar navbar-dark bg-dark" id="navbar">
+        <!-- Navbar content -->
+        <a class="navbar-brand" style="color: white;"> <strong>FOOD CORNER </strong> </a>
+        <h3 style="color: white;" id="resturantName" class="mx-2"></h3>
+        <div class="row" id="row">
+            <a href="./userSignin/usersignin.html" id="btn1" class="btn btn-outline-secondary"
+                style="color:white;">SIGN IN</a>
+            <div class="mx-2"></div>
+            <a href="./userSignup/usersignUp.html" id="btn2" class="btn btn-outline-secondary"
+                style="color: white;">SIGN UP</a>
+            <div class="pr-3"></div>
+            <a href="#" onclick="document.getElementById('id01').style.display='block'" ; id="orders"></a>
+        </div>
+    </nav>
+
+
+    <!-- ====================orders MOadal============== -->
+
+    <div class="w3-container">
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-teal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-display-topright">&times;</span>
+                    <h2>ORDERS STATUS</h2>
+                </header>
+                <div class="w3-container" id="navModal">
+                    <div class="my-5"></div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a href="#home1" class="nav-link active" data-toggle="pill">Pending</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#profile1" class="nav-link" data-toggle="pill">Accepted</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#products1" class="nav-link" data-toggle="pill">Delivered</a>
+                                    </li>
+                                </ul>
+
+
+
+                                <div class="tab-content py-3">
+                                    <div class="tab-pane fade show active" id="home1">MAAZ KA 1st
+                                        TAB
+                                    </div>
+                                    <div class="tab-pane fade" id="profile1">MAAZ KA 2nd
+                                        TAB
+                                    </div>
+                                    <div class="tab-pane fade" id="products1">MAAZ KA
+                                        3rd TAB
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper-container mySwiper"
+        id="slider">
+
+
+        <div class="parallax-bg" style="
+          background-image: url(./images/cristiano-pinto-2lWGQ02DGL8-unsplash.jpg);
+        " data-swiper-parallax="-23%"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="title animate__animated animate__bounce" data-swiper-parallax="-300" style="color: black;">
+                    <h2><strong> FOOD COURT</strong></h2>
+                </div>
+                <div class="subtitle animate__animated animate__backInDown" data-swiper-parallax="-200"
+                    style="color: rgb(3, 3, 3);">
+                    <h4><strong>with complete TASTE
+                        </strong></h4>
+                </div>
+                <div class="text" data-swiper-parallax="-100">
+                    <h6 style="color: black; background-color: rgba(187, 182, 182, 0.521); padding: 12px;"
+                        class="animate__animated animate__fadeInUpBig">
+                        <strong>
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                        </strong>
+                    </h6>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300" style="color: black;">
+                    <h2><strong> FOOD COURT</strong></h2>
+                </div>
+                <div class="subtitle" data-swiper-parallax="-200" style="color: black;">
+                    <h4><strong>with complete TASTE
+                        </strong></h4>
+                </div>
+                <div class="text animate__animated animate__fadeInUpBig" data-swiper-parallax="-100">
+                    <h6 style="color: black; background-color: rgba(187, 182, 182, 0.521); padding: 12px;">
+                        <strong>
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                        </strong>
+                    </h6>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-300" style="color: black;">
+                    <h2><strong> FOOD COURT</strong></h2>
+                </div>
+                <div class="subtitle" data-swiper-parallax="-200" style="color: black;">
+                    <h4><strong>with complete TASTE
+                        </strong></h4>
+                </div>
+                <div class="text" data-swiper-parallax="-1000">
+                    <h6 style="color: black; background-color: rgba(187, 182, 182, 0.521); padding: 12px;">
+                        <strong>
+
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+                        </strong>
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next" onclick=""></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+    <div class="container my-3">
+        <div class="row align-items-center">
+            <div class="col-md-1">
+            </div>
+            <div class="col">
+                <div class="nine">
+                    <h1 class="mt-5" style="color: black;">your favorite food is here<span style="color: black;">Taste
+                            You
+                            Want</span></h1>
+                </div>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center" id="getCard">
+        </div>
+    </div>
+
+    <!-- ================join us as resturan============== -->
+    <div class="my-5"></div>
+    <div class="my-5"></div>
+    <div class="my-5"></div>
+    <div class="conterner">
+        <div class="row" id="box">
+
+            <div class="container my-3">
+                <div class="row align-items-center">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col">
+                        <div class="nine">
+                            <h1 class="mt-5" style="color: rgb(255, 255, 255);">JOIN US AS A RESTURANT PARTNER
+                                <span style="color: rgb(255, 255, 255);">click below for signUp </span>
+                                <a class="btn btn-outline-secondary" style="color: white;" href="./resturantSignup/resturant.html">SIGN
+                                    UP</a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-5"></div>
+    <div class="my-5"></div>
+    <div class="my-5"></div>
+
+
+
+
+
+
+
+
+
+    <!-- ===============footer==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the
+                        upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or
+                        snippets as the code wants to be simple. We will help programmers build up concepts in different
+                        programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android,
+                        SQL and Algorithm.</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                        <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                        <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                        <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                        <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                        <a href="#">Scanfcode</a>.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            speed: 600,
+            parallax: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <!-- ==========================bootstrap cdn========================== -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- ================================firebase SDK================================ -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBZh1Iqx7sJZgC65maWPYmIZcUx3LPH3qY",
+            authDomain: "hackathon-2db2e.firebaseapp.com",
+            projectId: "hackathon-2db2e",
+            storageBucket: "hackathon-2db2e.appspot.com",
+            messagingSenderId: "668504465926",
+            appId: "1:668504465926:web:11843ee5abadc43b365987"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- ===================================external js file=================================== -->
+
+
+    <script src="./user.js"></script>
+</body>
+
+</html>
